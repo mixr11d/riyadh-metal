@@ -5,10 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تركيب مظلات سيارات بالرياض | قماش كوري وألماني وحديد سابك بخصم 20%</title>
   <meta name="description" content="أفضل ورشة تركيب مظلات سيارات بالرياض، مظلات كابولي، هرمية، إكس، ومظلات مواقف سيارات قماش PVC وبولي إيثيلين عازل للحرارة وضمان 10 سنوات.">
+  
+  <!-- Critical Performance Optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&display=swap"></noscript>
+
+  <link rel="preload" as="image" href="./images/car-parking-shades-1_result.webp" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
 
@@ -19,7 +26,7 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="./index.html" class="logo-wrap">
-        <img src="./images/logo_result.webp" alt="شعار ورشة حدادة ومظلات الرياض">
+        <img src="./images/logo_result.webp" alt="شعار ورشة حدادة ومظلات الرياض" width="50" height="50">
         <div class="logo-text">مؤسسة وردة الخزائن<span>الرياض وكافة أحيائها</span></div>
       </a>
       <button class="mobile-toggle" aria-label="القائمة">☰</button>
@@ -47,19 +54,22 @@
     </div>
   </header>
 
-  <section class="hero" style="background-image: linear-gradient(135deg, rgba(15, 22, 34, 0.88) 0%, rgba(26, 35, 50, 0.85) 100%), url('./images/car-parking-shades-1_result.webp');">
+  <!-- Optimized Hero for Instant LCP -->
+  <section class="hero">
+    <img src="./images/car-parking-shades-1_result.webp" alt="مظلات سيارات بالرياض" class="hero-bg-img" fetchpriority="high" loading="eager" width="1200" height="600">
+    <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="hero-badge">🛡️ عزل حراري ومقاومة للرياح بنسبة 100%</div>
       <h1 class="hero-title">تفصيل وتركيب <span>مظلات السيارات والمواقف</span> بالرياض</h1>
       <p class="hero-desc">
-        نصمم مظلات سيارات للفلل والمشاريع الحكومية والشركات بأعلى معايير المتانة. أقمشة PVC كورية وألمانية وزن 1100 و 900 جرام مقاومة للاشتعال والتمزق مع دهان ناري عازل للصدأ.
+        نصمم مظلات سيارات للفلل والمشاريع الحكومية والشركات بأعلى معايير المتانة. أقمشة PVC كورية وألمانية عازلة للحرارة ومقاومة للرياح الشديدة.
       </p>
       <div class="hero-actions">
         <a href="tel:0554119157" class="btn btn-call">
-          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17.93 17.93 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
           اتصل للمقايسة الفورية: 0554119157
         </a>
-        <a href="https://wa.me/966554119157?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%20%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA" class="btn btn-whatsapp">
+        <a href="https://wa.me/966554119157" class="btn btn-whatsapp">
           <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
           محادثة واتساب سريعة
         </a>
@@ -67,7 +77,7 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
+  <!-- Gallery Section with Zero Shift & Lazy Loading -->
   <section class="section">
     <div class="container">
       <div class="section-title-wrap">
@@ -77,14 +87,14 @@
       </div>
 
       <div class="gallery-grid">
-        <div class="gallery-item"><img src="./images/car-parking-shades-1_result.webp" alt="مظلة سيارة كابولي فخمة بالرياض" loading="lazy"></div>
-        <div class="gallery-item"><img src="./images/car-parking-shades-2_result.webp" alt="مظلات سيارات هرمية قماش كوري" loading="lazy"></div>
-        <div class="gallery-item"><img src="./images/car-parking-shades-3_result.webp" alt="تركيب مظلات مواقف سيارات فلل" loading="lazy"></div>
-        <div class="gallery-item"><img src="./images/car-parking-shades-4_result.webp" alt="مظلات سيارات إكس شنكار" loading="lazy"></div>
-        <div class="gallery-item"><img src="./images/car-parking-shades-5_result.webp" alt="مظلة سيارة حديثة شمال الرياض" loading="lazy"></div>
-        <div class="gallery-item"><img src="./images/car-parking-shades-6_result.webp" alt="مظلات سيارات خارجية للمنازل" loading="lazy"></div>
-        <div class="gallery-item"><img src="./images/car-parking-shades-7_result.webp" alt="تفصيل مظلة سيارات ليزر وحديد" loading="lazy"></div>
-        <div class="gallery-item"><img src="./images/car-parking-shades-8_result.webp" alt="مظلات مواقف مجمعات سكنية" loading="lazy"></div>
+        <div class="gallery-item"><img src="./images/car-parking-shades-1_result.webp" alt="مظلة سيارة كابولي فخمة بالرياض" width="300" height="225" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="./images/car-parking-shades-2_result.webp" alt="مظلات سيارات هرمية قماش كوري" width="300" height="225" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="./images/car-parking-shades-3_result.webp" alt="تركيب مظلات مواقف سيارات فلل" width="300" height="225" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="./images/car-parking-shades-4_result.webp" alt="مظلات سيارات إكس شنكار" width="300" height="225" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="./images/car-parking-shades-5_result.webp" alt="مظلة سيارة حديثة شمال الرياض" width="300" height="225" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="./images/car-parking-shades-6_result.webp" alt="مظلات سيارات خارجية للمنازل" width="300" height="225" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="./images/car-parking-shades-7_result.webp" alt="تفصيل مظلة سيارات ليزر وحديد" width="300" height="225" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="./images/car-parking-shades-8_result.webp" alt="مظلات مواقف مجمعات سكنية" width="300" height="225" loading="lazy" decoding="async"></div>
       </div>
     </div>
   </section>
@@ -195,6 +205,5 @@
     </div>
   </footer>
 
-  <script src="./script.js"></script>
 </body>
 </html>
