@@ -3,41 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>من نحن | ورشة فن الحدادة والمظلات والسواتر الحديثة بالرياض</title>
+  <title>من نحن | مؤسسة وردة الخزائن للحدادة والمظلات بالرياض</title>
   <meta name="description" content="تعرف على خبرتنا في تفصيل وتركيب المظلات والسواتر والهناجر والسلالم الحديدية بالرياض. فريق من أمهر الحدادين، التزام بالمواعيد، وضمان رسمي معتمد.">
+  
+  <!-- Extreme Speed & Zero-Blocking Optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&display=swap"></noscript>
+
+  <link rel="preload" as="image" href="./images/car-parking-shades-2_result.webp" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+
   <style>
-    /* Responsive Content Styling for About Us Page */
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, 'Cairo', sans-serif; }
     .about-layout {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 2.5rem;
       align-items: center;
     }
-
     .about-content-box {
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
     }
-
     .about-text-lead {
       font-size: 1.05rem;
       color: var(--text-muted);
       line-height: 1.85;
       text-align: justify;
     }
-
     .about-features-list {
       display: grid;
       grid-template-columns: 1fr;
       gap: 0.9rem;
       margin-top: 0.5rem;
     }
-
     .about-feature-item {
       background: var(--surface);
       border: 1px solid var(--border-color);
@@ -51,7 +55,6 @@
       align-items: center;
       gap: 0.6rem;
     }
-
     .about-img-wrap {
       width: 100%;
       border-radius: var(--radius-md);
@@ -59,24 +62,19 @@
       box-shadow: var(--shadow-md);
       border: 1px solid var(--border-color);
     }
-
     .about-img-wrap img {
       width: 100%;
       height: 380px;
       object-fit: cover;
     }
-
-    /* Mobile UX Optimization */
     @media (max-width: 860px) {
       .about-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
       }
-      
       .about-img-wrap img {
         height: 240px;
       }
-
       .about-text-lead {
         font-size: 0.98rem;
         line-height: 1.8;
@@ -93,10 +91,15 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="./index.html" class="logo-wrap">
-        <img src="./images/logo_result.webp" alt="شعار ورشة حدادة ومظلات الرياض">
-        <div class="logo-text">مؤسسة وردة الخزائن<span>الرياض وكافة أحيائها</span></div>
+        <img src="./images/logo_result.webp" alt="شعار مؤسسة وردة الخزائن" width="50" height="50">
+        <div class="logo-text">
+          مؤسسة وردة الخزائن
+          <span>الرياض وكافة أحيائها</span>
+        </div>
       </a>
+
       <button class="mobile-toggle" aria-label="القائمة">☰</button>
+
       <nav class="nav-menu">
         <div class="nav-item"><a href="./index.html" class="nav-link">الرئيسية</a></div>
         <div class="nav-item dropdown">
@@ -121,7 +124,9 @@
     </div>
   </header>
 
-  <section class="hero" style="padding: 4.5rem 0 3rem; background-image: linear-gradient(135deg, rgba(15, 22, 34, 0.88) 0%, rgba(26, 35, 50, 0.85) 100%), url('./images/car-parking-shades-2_result.webp');">
+  <section class="hero" style="padding: 4.5rem 0 3rem;">
+    <img src="./images/car-parking-shades-2_result.webp" alt="أعمال مؤسسة وردة الخزائن بالرياض" class="hero-bg-img" fetchpriority="high" loading="eager" decoding="async" width="1000" height="500">
+    <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="hero-badge">⭐ ريادة واحترافية في أعمال الحديد والمعادن</div>
       <h1 class="hero-title">نصنع <span>المتانة والقوة</span> في كل تفصيلة حدادة</h1>
@@ -142,7 +147,7 @@
           </div>
           
           <p class="about-text-lead">
-            انطلقنا في مدينة الرياض لتقديم خدمات حدادة معمارية وصناعية متطورة تخدم أصحاب الفلل والمشاريع والشركات. نحرص على استخدام حديد سابك الأصلي، دهانات الإيبوكسي المقاومة للتآكل، وأحدث ماكينات اللحام وقص الليزر، لتسليم مشاريع تدوم لعقود دون تأثر بحرارة أو عواصف الرياض.
+            انطلقت مؤسسة وردة الخزائن في مدينة الرياض لتقديم خدمات حدادة معمارية وصناعية متطورة تخدم أصحاب الفلل والمشاريع والشركات. نحرص على استخدام حديد سابك الأصلي، دهانات الإيبوكسي المقاومة للتآكل، وأحدث ماكينات اللحام وقص الليزر، لتسليم مشاريع تدوم لعقود دون تأثر بحرارة أو عواصف الرياض.
           </p>
 
           <div class="about-features-list">
@@ -162,7 +167,7 @@
         </div>
 
         <div class="about-img-wrap">
-          <img src="./images/hangars-warehouses-2_result.webp" alt="فريق عمل ورشة الحدادة بالرياض" loading="lazy">
+          <img src="./images/hangars-warehouses-2_result.webp" alt="فريق عمل مؤسسة وردة الخزائن بالرياض" width="500" height="380" loading="lazy" decoding="async">
         </div>
 
       </div>
@@ -174,7 +179,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h4>ورشة فن الحدادة والمظلات بالرياض</h4>
+          <h4>مؤسسة وردة الخزائن بالرياض</h4>
           <p style="font-size: 0.9rem; line-height: 1.7; color: #94a3b8;">
             المؤسسة المتخصصة في تنفيذ أعمال الحدادة المعمارية، تفصيل مظلات السيارات، السواتر، الهناجر، الساندوتش بانل، وسلالم الطوارئ في كافة مناطق وأحياء الرياض.
           </p>
@@ -231,7 +236,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2025 جميع الحقوق محفوظة - ورشة فن الحدادة والمظلات الحديثة بالرياض</p>
+        <p>© 2025 جميع الحقوق محفوظة - مؤسسة وردة الخزائن بالرياض</p>
         <div>
           <a href="https://wa.me/966578539687" target="_blank" rel="nofollow noopener" class="developer-credit">
             تطوير مواقع وإعلانات الرعد التقني ⚡
@@ -241,6 +246,5 @@
     </div>
   </footer>
 
-  <script src="./script.js"></script>
 </body>
 </html>
