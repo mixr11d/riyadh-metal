@@ -1,5 +1,6 @@
 /* ==========================================================================
-   Industrial & Steel Theme - 100% Ultra Fast & Zero CLS
+   Industrial & Steel Theme - 100% Performance Optimized
+   Activity: Modern Metalwork, Shades, Screens & Hangars Riyadh
    ========================================================================== */
 
 :root {
@@ -22,7 +23,7 @@
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
-  --font-main: 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-main: 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   --transition: all 0.25s ease;
 }
 
@@ -53,7 +54,6 @@ img {
   height: auto;
   display: block;
   object-fit: cover;
-  content-visibility: auto;
 }
 
 a {
@@ -216,17 +216,42 @@ ul { list-style: none; }
   padding: 0.4rem;
 }
 
-/* Hero Section (Optimized for Fast LCP) */
+/* Hero Section (Ultra-Fast LCP Architecture) */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, rgba(15, 22, 34, 0.88) 0%, rgba(26, 35, 50, 0.85) 100%), url('./images/car-parking-shades-1_result.webp') center/cover no-repeat;
   color: #ffffff;
   padding: 5rem 0 4rem;
   text-align: center;
-  min-height: 480px;
+  overflow: hidden;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(15, 22, 34, 0.9) 0%, rgba(26, 35, 50, 0.86) 100%);
+  z-index: 1;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
   max-width: 840px;
   margin: 0 auto;
 }
@@ -326,7 +351,11 @@ ul { list-style: none; }
 }
 
 /* Sections */
-.section { padding: 4.2rem 0; }
+.section { 
+  padding: 4.2rem 0; 
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}
 
 .section-title-wrap {
   text-align: center;
@@ -357,7 +386,7 @@ ul { list-style: none; }
   color: var(--text-muted);
 }
 
-/* Services Grid (Zero CLS Layout) */
+/* Services Grid */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -391,10 +420,7 @@ ul { list-style: none; }
 .service-card-img img {
   width: 100%;
   height: 100%;
-  transition: transform 0.4s ease;
 }
-
-.service-card:hover .service-card-img img { transform: scale(1.05); }
 
 .service-card-body {
   padding: 1.35rem;
@@ -427,7 +453,7 @@ ul { list-style: none; }
   font-size: 0.94rem;
 }
 
-/* Gallery Grid */
+/* Gallery Grid (Zero Layout Shift Architecture) */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -454,6 +480,7 @@ ul { list-style: none; }
 .gallery-item img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 4 / 3;
 }
 
 /* Lead Form */
@@ -545,7 +572,7 @@ ul { list-style: none; }
   color: var(--text-muted);
 }
 
-/* Floating Action Buttons */
+/* Centralized Floating Buttons */
 .fab-container-right {
   position: fixed;
   bottom: 1.5rem;
@@ -570,6 +597,7 @@ ul { list-style: none; }
   text-decoration: none;
 }
 
+.fab-btn svg { display: block; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25)); }
 .fab-call { background: linear-gradient(135deg, #0284c7, #0369a1); }
 .fab-whatsapp { background: linear-gradient(135deg, #25d366, #16a34a); }
 
@@ -614,6 +642,8 @@ ul { list-style: none; }
   color: #cbd5e1;
   padding: 4rem 0 1.5rem;
   border-top: 4px solid var(--accent);
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 400px;
 }
 
 .footer-grid {
@@ -766,4 +796,9 @@ ul { list-style: none; }
     color: var(--text-main);
   }
   .dropdown-menu a:last-child { border-bottom: none; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
