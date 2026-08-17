@@ -13,10 +13,10 @@
   const CLIENT_PHONE = '0554119157';
   const CLIENT_INT_PHONE = '966554119157';
   
-  const GOOGLE_ADS_ID = ''; 
-  const CONVERSION_LABEL_CALL = ''; 
-  const CONVERSION_LABEL_WHATSAPP = ''; 
-  const CONVERSION_LABEL_FORM = ''; 
+  const GOOGLE_ADS_ID = 'AW-18393012121'; 
+  const CONVERSION_LABEL_CALL = 'hY3ICPv3jeMcEJmvvMJE'; 
+  const CONVERSION_LABEL_WHATSAPP = 'v8GRCP73jeMcEJmvvMJE'; 
+  const CONVERSION_LABEL_FORM = '48BKCK_RkOMcEJmvvMJE'; 
 
   // حقن Google Tag تلقائياً
   if (GOOGLE_ADS_ID && GOOGLE_ADS_ID.trim() !== '') {
