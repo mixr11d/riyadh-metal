@@ -64,6 +64,27 @@ function triggerGoogleConversion(label, callbackUrl) {
 // =========================================================================
 document.addEventListener('DOMContentLoaded', () => {
 
+  // تفعيل القائمة المنسدلة لخدمات الحدادة (فتح / إغلاق عند الضغط)
+  const dropdownBtn = document.querySelector('.dropdown-btn');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  if (dropdownBtn && dropdownMenu) {
+    dropdownBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('show');
+      dropdownBtn.classList.toggle('open');
+    });
+
+    // إغلاق القائمة عند النقر خارجها
+    document.addEventListener('click', (e) => {
+      if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove('show');
+        dropdownBtn.classList.remove('open');
+      }
+    });
+  }
+
   // حقن أزرار الواتساب والاتصال في اليمين
   if (!document.querySelector('.fab-container-right')) {
     const fabRight = document.createElement('div');
@@ -157,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const targetUrl = `https://wa.me/${CLIENT_INT_PHONE}?text=${msg}`;
       
-      // فتح الواتساب بعد إرسال الإحالة مباشرة
       setTimeout(() => {
         window.open(targetUrl, '_blank');
       }, 300);
@@ -171,10 +191,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       navMenu.classList.toggle('open');
       document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
     });
   }
+
+  // إغلاق القائمة الجانبية عند النقر في الخارج للجوال
+  document.addEventListener('click', (e) => {
+    if (navMenu && navMenu.classList.contains('open')) {
+      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+  });
 
   const closeBtn = document.querySelector('.drawer-close-btn') || document.querySelector('.close-sidebar-btn');
   if (closeBtn && navMenu) {
